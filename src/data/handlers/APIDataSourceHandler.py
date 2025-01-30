@@ -13,12 +13,12 @@ class APIDataSourceHandler(DataSourceHandler, ABC):
         stock_data = parse_stock_data()
         for stock in stock_data:
             self.__stock_dtos.append(StockDTO(
-                stock['open'],
-                stock['high'],
-                stock['low'],
-                stock['close'],
-                stock['volume'],
                 stock['date'],
+                stock['open'],
+                stock['low'],
+                stock['high'],
+                stock['volume'],
+                stock['close'],
             ))
 
 
