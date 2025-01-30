@@ -2,6 +2,6 @@
 
 Create .env file
 
-cp src/.env.example /src/.env
+cp src/.env.example src/.env
 
 and add api key
