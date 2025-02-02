@@ -14,7 +14,7 @@ handler.load_stock_data()
 print(len(handler.get_stock_dtos()))
 
 # initialize PredictionModel
-model = PredictionModel(train_data_len=300, test_data_len=50)
+model = PredictionModel(train_data_len=300, test_data_len=100)
 
 # get data frame
 dataFrame = model.load_data_frame(handler.get_stock_dtos())

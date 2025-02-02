@@ -91,7 +91,7 @@ class PredictionModel():
 
 
     def plot_predicted_and_real_price(self, predicted_price):
-        print(self.stocks[-50], self.stocks[-1])
+        # print(self.stocks[-50], self.stocks[-1])
 
         real_price = self.__scaler.inverse_transform(self.__test_next_day_stock_price.reshape(-1, 1))
         plt.plot(real_price, color='orange', label='real price')
@@ -101,3 +101,5 @@ class PredictionModel():
         plt.ylabel('stock price')
         plt.legend()
         plt.show()
+        print(f'RMSE {metrics.mean_squared_error(predicted_price, real_price, squared=False)}')
+        print(f'MAE {metrics.mean_absolute_error(predicted_price, real_price)}')
